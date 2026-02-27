@@ -1,4 +1,6 @@
-/* RESET */
+/* =========================
+   RESET
+========================= */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +13,12 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    overflow-x: hidden; /* prevent sideways scroll */
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* =========================
@@ -55,7 +62,7 @@ body {
 
 /* TYPING TEXT */
 .typing-text {
-    min-height: 45px; /* prevents movement */
+    min-height: 45px;
     font-size: 20px;
     color: white;
     margin-bottom: 10px;
@@ -77,7 +84,7 @@ body {
 ========================= */
 .hero-buttons {
     display: flex;
-    flex-direction: column; /* stack on mobile */
+    flex-direction: column;
     gap: 10px;
 }
 
@@ -93,12 +100,19 @@ body {
     cursor: pointer;
     color: white;
     text-align: center;
+    transition: 0.3s ease;
 }
 
-/* Colors */
+/* Button Colors */
 .btn { background: #2a5298; }
 .download-btn { background: #007bff; }
 .print-btn { background: #28a745; }
+
+/* Hover Effects */
+.hero-buttons a:hover,
+.hero-buttons button:hover {
+    opacity: 0.85;
+}
 
 /* =========================
    RESUME SECTION
@@ -145,6 +159,29 @@ body {
 }
 
 /* =========================
+   TRAININGS & CERTIFICATES
+========================= */
+.training-list li {
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.training-list li:hover {
+    color: #007bff;
+}
+
+.cert-img {
+    display: none;
+    width: 100%;
+    max-width: 700px;
+    margin: 15px auto;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* =========================
    DESKTOP RESPONSIVE
 ========================= */
 @media (min-width: 768px) {
@@ -168,7 +205,7 @@ body {
     }
 
     .hero-buttons {
-        flex-direction: row; /* side by side on desktop */
+        flex-direction: row;
         justify-content: center;
     }
 
@@ -192,5 +229,15 @@ body {
 
     .resume-block h3 {
         font-size: 20px;
+    }
+}
+
+/* =========================
+   MOBILE FIX
+========================= */
+@media (max-width: 768px) {
+    .cert-img {
+        border-radius: 8px;
+        margin: 8px 0 15px 0;
     }
 }
