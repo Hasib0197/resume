@@ -108,19 +108,43 @@
         </div>
 
         <!-- Training & Seminars -->
-        <div class="resume-block">
-            <h3>Training & Seminars</h3>
-            <ul>
-                <li>How to Start Coding – October 2020</li>
-                <li>ICT Trends: Cybersecurity Government Initiatives – October 2020</li>
-                <li>ICT Trends: Data Privacy Law and Its Mandate – October 2020</li>
-                <li>Hot Skills for Higher-Value Jobs – October 2020</li>
-                <li>National Ethical Guidelines & Research Ethics – September 2020</li>
-                <li>Institutional Roles in Ethics Review of Research – September 2020</li>
-            </ul>
-        </div>
+      <div class="resume-block">
+		<h3>Training & Seminars</h3>
+		
+		<ul class="training-list">
 
-    </div>
+        <li onclick="showCert('cert1')">
+            How to Start Coding – October 2020
+        </li>
+        <img id="cert1" src="certificates/cert1.jpg" class="cert-img">
+
+        <li onclick="showCert('cert2')">
+            ICT Trends: Cybersecurity Government Initiatives – October 2020
+        </li>
+        <img id="cert2" src="certificates/cert2.jpg" class="cert-img">
+
+        <li onclick="showCert('cert3')">
+            ICT Trends: Data Privacy Law and Its Mandate – October 2020
+        </li>
+        <img id="cert3" src="certificates/cert3.jpg" class="cert-img">
+
+        <li onclick="showCert('cert4')">
+            Hot Skills for Higher-Value Jobs – October 2020
+        </li>
+        <img id="cert4" src="Hot Skills to Learn for Higher Value Jobs Certificate.jpg" class="cert-img">
+
+        <li onclick="showCert('cert5')">
+            Developing Outstanding Leadership Skills – October 2020
+        </li>
+        <img id="cert5" src="Developing Outstanding Leadership Skills.jpg" class="cert-img">
+
+        <li onclick="showCert('cert6')">
+            Institutional Roles in Ethics Review of Research – September 2020
+        </li>
+        <img id="cert6" src="certificates/cert6.jpg" class="cert-img">
+    </ul>
+	
+	</div>
 </section>
 
 <!-- Typed.js -->
@@ -139,6 +163,20 @@ document.addEventListener("DOMContentLoaded", function () {
         loop: true
     });
 });
+</script>
+
+<script>
+function showCert(id) {
+    const allCerts = document.querySelectorAll(".cert-img");
+
+    // Hide all first
+    allCerts.forEach(img => {
+        img.style.display = "none";
+    });
+
+    // Show selected
+    document.getElementById(id).style.display = "block";
+}
 </script>
 
 </body>
